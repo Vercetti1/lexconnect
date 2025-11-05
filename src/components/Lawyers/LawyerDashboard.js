@@ -25,21 +25,21 @@ function LawyerDashboard() {
         <h4 className="fw-bold mb-4 text-center text-warning">LexConnect</h4>
 
         <nav className="nav flex-column gap-2">
-          <a className="nav-link text-white active fw-semibold" href="#">
+          <Link className="nav-link text-white active fw-semibold" to="/lawyer/dashboard">
             Dashboard
-          </a>
-          <a className="nav-link text-white-50" href="#">
+          </Link>
+          <Link className="nav-link text-white-50" to="/lawyer/clients">
             Clients
-          </a>
-          <a className="nav-link text-white-50" href="#">
+          </Link>
+          <Link className="nav-link text-white-50" to="/lawyer/messages">
             Messages
-          </a>
-          <a className="nav-link text-white-50" href="#">
+          </Link>
+          <Link className="nav-link text-white-50" to="/lawyer/payments">
             Payments
-          </a>
-          <a className="nav-link text-white-50" href="#">
+          </Link>
+          <Link className="nav-link text-white-50" to="/lawyer/settings">
             Profile Settings
-          </a>
+          </Link>
         </nav>
 
         <div className="mt-auto">

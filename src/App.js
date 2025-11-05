@@ -267,7 +267,7 @@ function Footer() {
 /* ---------- App ---------- */
 function App() {
   const [showModal, setShowModal] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn] = useState(false);
 
   return (
     <Router>
