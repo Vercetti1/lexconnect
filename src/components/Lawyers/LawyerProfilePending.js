@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function LawyerProfilePending() {
+  const navigate = useNavigate();
+
   return (
     <div
       style={{
@@ -130,7 +132,8 @@ function LawyerProfilePending() {
   <button
     onClick={() => {
       setTimeout(() => {
-        window.location.href = "/lawyer/dashboard"; // Redirect to verified dashboard
+        // Client-side navigation avoids hard reload that can 404 on Netlify
+        navigate("/lawyer/dashboard");
       }, 1500);
     }}
     className="btn btn-success px-4 py-2"

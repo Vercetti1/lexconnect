@@ -1,7 +1,9 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function ClientSignup() {
+  const navigate = useNavigate();
+
   return (
     <div
       className="d-flex flex-column justify-content-center align-items-center"
@@ -25,8 +27,8 @@ function ClientSignup() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-           window.location.href = "/client/dashboard"; // ✅ redirect to the real dashboard
-
+            // Use client-side navigation to avoid full page reloads (prevents Netlify 404s)
+            navigate("/client/dashboard");
           }}
         >
           <div className="mb-3">

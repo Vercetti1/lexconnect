@@ -1,7 +1,8 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function ClientLogin() {
+  const navigate = useNavigate();
   return (
     <div
       className="d-flex flex-column justify-content-center align-items-center"
@@ -15,7 +16,7 @@ function ClientLogin() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            window.location.href = "/client/dashboard";
+            navigate("/client/dashboard");
           }}
         >
           <div className="mb-3">
